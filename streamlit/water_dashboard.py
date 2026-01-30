@@ -6,13 +6,11 @@ import plotly.express as px
 from shapely.geometry import Point, shape
 import json
 import time
-import os  # 👈 新增这一行！
+import os
 
-# ==========================================
-# 1. 页面配置 (必须放在最第一行，只写一次)
-# ==========================================
+# 1. 基础页面配置
 st.set_page_config(
-    page_title="ZJU Water Monitor Pro", # 标题合并过来了
+    page_title="ZJU Water Monitor",
     layout="wide",
     page_icon="🌊"
 )
@@ -29,14 +27,13 @@ def set_apple_icon(image_url):
     """
     st.markdown(apple_icon_code, unsafe_allow_html=True)
 
-# ⚠️ 修正后的链接 (使用 raw 链接，指向 main 分支)
-# 请务必去 GitHub 确认你的文件名是 .png 还是 .png.jpg
-# 这里我暂时帮你写成你原始代码里的样子，如果图标不显示，试着去掉 ".jpg"
-ICON_URL = "https://raw.githubusercontent.com/huangmi0711-creator/zju-water-monitor/main/app_icon.png"
-# 或者如果你的文件名真的叫 app_icon.png.jpg，就用下面这行：
-# ICON_URL = "https://raw.githubusercontent.com/huangmi0711-creator/zju-water-monitor/main/app_icon.png.jpg"
+# ⚠️ 这里的链接已经为你改好了，指向 zju-water-monitor2.0 仓库的 streamlit 文件夹
+ICON_URL = "https://raw.githubusercontent.com/huangmi0711-creator/zju-water-monitor2.0/main/streamlit/app_icon.png"
 
+# 执行注入
 set_apple_icon(ICON_URL)
+
+# ... (下面接你原本的 load_lake_boundary 代码)
 
 # ==========================================
 # 2. 地图加载 (修改版：自动定位文件路径)
