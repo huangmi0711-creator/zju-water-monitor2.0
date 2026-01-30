@@ -28,7 +28,7 @@ def set_apple_icon(image_url):
     st.markdown(apple_icon_code, unsafe_allow_html=True)
 
 # ⚠️ 这里的链接已经为你改好了，指向 zju-water-monitor2.0 仓库的 streamlit 文件夹
-ICON_URL = "https://raw.githubusercontent.com/huangmi0711-creator/zju-water-monitor2.0/main/streamlit/app_icon.png"
+ICON_URL = "https://raw.githubusercontent.com/huangmi0711-creator/zju-water-monitor2.0/main/streamlit/app_icon.png?v=2"
 
 # 执行注入
 set_apple_icon(ICON_URL)
